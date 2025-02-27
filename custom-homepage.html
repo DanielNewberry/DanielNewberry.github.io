@@ -187,9 +187,9 @@
                 if (event.key === "Enter") {
                     const inputText = inputBox.value.trim().toLowerCase();
                     if (links[inputText]) {
-                        window.open(links[inputText], "_blank");
+                        window.location.href = links[inputText];
                     } else {
-                        window.open(`https://duckduckgo.com/?q=${encodeURIComponent(inputText)}`, "_blank");
+                        window.open(`https://duckduckgo.com/?q=${encodeURIComponent(inputText)}`, );
                     }
                     inputBox.value = "";
                     filterItems("");
@@ -200,7 +200,7 @@
                 item.addEventListener("click", function () {
                     const text = item.innerText.toLowerCase();
                     if (links[text]) {
-                        window.open(links[text], "_blank");
+                        window.location.href = links[text];
                     }
                 });
             });
